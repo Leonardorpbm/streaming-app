@@ -1,0 +1,635 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ef922e;
+  border-radius: 100px;
+}
+
+.burger {
+  position: absolute;
+  width: 7%;
+  right: 0;
+  opacity: 0;
+}
+
+.active {
+  color: #ef922e !important;
+}
+
+.container {
+  width: 70%;
+  height: 100vh;
+  position: relative;
+}
+
+.logo {
+  width: 5%;
+  cursor: pointer;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 2rem;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+  font-size: 1rem;
+  color: #bababa;
+}
+
+.nav_links li a:hover {
+  color: #353535;
+}
+
+li,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 10%;
+}
+
+.recommended {
+  width: 100%;
+  position: relative;
+}
+
+.recommended h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  padding: 0rem 2rem;
+  padding-top: 1rem;
+  margin-left: 3rem;
+}
+
+.slideshow_1 {
+  width: 90%;
+  padding: 2rem 2rem;
+  margin-left: 3rem;
+}
+
+button {
+  width: 15%;
+  height: 7%;
+  display: flex;
+  position: absolute;
+  left: 13%;
+  bottom: 13%;
+  background: #ef922e;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.play_btn {
+  position: absolute;
+  width: 15%;
+  left: 15%;
+  top: 15%;
+}
+
+button p {
+  position: absolute;
+  font-size: 1rem;
+  top: 25%;
+  left: 40%;
+}
+
+/*slider*/
+
+.slider {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.slider h2 {
+  position: absolute;
+  font-size: 3rem;
+  left: 1.5rem;
+}
+
+.slides {
+  width: 500%;
+  height: 70vh;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 95%;
+  margin-left: 1.5rem;
+  margin-top: 5rem;
+  cursor: pointer;
+}
+
+.manual-nav {
+  position: absolute;
+  width: 800px;
+  display: flex;
+  left: 45%;
+}
+
+.manual-btn {
+  border: 2px solid orange;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: orange;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+.auto-nav {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  left: 45%;
+  top: 88.3%;
+}
+
+.auto-nav div {
+  border: 2px solid orange;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.auto-nav div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .auto-nav .auto-btn1 {
+  background: orange;
+}
+
+#radio2:checked ~ .auto-nav .auto-btn2 {
+  background: orange;
+}
+
+#radio3:checked ~ .auto-nav .auto-btn3 {
+  background: orange;
+}
+
+#radio4:checked ~ .auto-nav .auto-btn4 {
+  background: orange;
+}
+
+/*carrossel*/
+
+#popular_movies {
+  padding-top: 3rem;
+}
+
+.popular_movies_slider {
+  width: 100%;
+  height: 250px;
+  margin: 0 20px 10px 20px;
+  overflow: hidden;
+}
+
+.popular_movies_slider img {
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.popular_text {
+  padding-left: 3rem;
+  padding-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #353535;
+}
+
+.cS-hidden {
+  height: 1px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  overflow: hidden;
+}
+
+.orange {
+  position: absolute;
+  top: 1rem;
+  height: 95vh;
+  width: 25%;
+  background-color: #ef922e;
+  z-index: 201;
+  position: fixed;
+  right: 2%;
+  border-radius: 50px;
+  overflow-y: scroll;
+}
+
+.close {
+  position: absolute;
+  width: 20%;
+  opacity: 0;
+}
+
+.orange::-webkit-scrollbar {
+  width: 0px;
+}
+
+#leo {
+  margin: 0;
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+#leo:hover {
+  filter: contrast(50%);
+}
+
+.orange h1 {
+  color: white;
+  margin: 0;
+  text-align: center;
+  margin-top: 40%;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.shape {
+  height: 1%;
+  width: 16%;
+  background-color: white;
+  border-radius: 40px;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 0;
+}
+
+.library {
+  position: absolute;
+  width: 100%;
+}
+
+.library h1 {
+  position: absolute;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 52px;
+  margin-left: 24px;
+}
+
+#search {
+  width: 80%;
+  position: absolute;
+  margin-left: 24px;
+  padding: 8px;
+  border-radius: 4px;
+  border-color: transparent;
+  margin-top: 100px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  margin-left: 24px;
+  margin-top: 148px;
+}
+
+.filters2 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 24px;
+  margin-top: 12px;
+}
+
+.filter {
+  background-color: #f3ac60;
+  width: 20%;
+  font-size: 12px;
+  padding: 8px 0px 8px 0px;
+  text-align: center;
+  color: white;
+  border-radius: 600px;
+  font-weight: regular;
+  margin-right: 14px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.continuar {
+  margin-top: -30px;
+  margin-left: 24px;
+}
+
+.continuar p {
+  color: #fff;
+}
+
+.continuar2 {
+  margin-top: -90px;
+}
+
+.continuar_peaky {
+  margin-left: 30px;
+  padding-bottom: 30px;
+}
+
+.continuar img {
+  margin-top: 108px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.info_filmes {
+  position: fixed;
+  width: 1300px;
+
+  height: 80vh;
+  display: flex;
+  background: #fff;
+  border-radius: 40px;
+  left: 7%;
+  top: 10%;
+  z-index: -10;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.info_filmes button a {
+  color: white;
+}
+
+.imagem_filme {
+  position: relative;
+  width: 50%;
+  height: 80vh;
+}
+
+.imagem_filme img {
+  position: relative;
+  width: 85%;
+  left: 7%;
+  top: 3%;
+  border-radius: 50px;
+}
+
+.texto {
+  width: 50%;
+  height: 80vh;
+}
+
+.titulo_fechar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.fechar {
+  cursor: pointer;
+  z-index: 100000;
+}
+
+.titulo_fechar img {
+  width: 50%;
+}
+
+.ano_idade {
+  display: flex;
+  margin-top: 5%;
+}
+
+.ano_idade p {
+  font-size: 1.5rem;
+}
+
+.ano_idade p:nth-child(2) {
+  font-size: 1.2em;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  margin-left: 20px;
+  background-color: #ef922e;
+}
+
+.descricao {
+  padding: 0 5% 0 0;
+  margin-top: 4%;
+}
+
+.ver_filme {
+  position: absolute;
+  left: 50%;
+  color: #fff;
+}
+
+.ver_filme p {
+  margin-left: -11%;
+}
+
+.black {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #353535;
+  z-index: -11;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.orange_bg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: #ef922e;
+  z-index: 0;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 14%;
+    left: -5%;
+    width: 110%;
+  }
+
+  .burger {
+    position: absolute;
+    opacity: 1;
+    right: 10%;
+    top: 8%;
+    cursor: pointer;
+  }
+
+  .logo {
+    width: 10%;
+  }
+
+  .slider {
+    display: none;
+  }
+
+  .orange {
+    position: absolute;
+    width: 100%;
+    height: 99vh;
+    opacity: 0;
+    z-index: -20;
+    border-radius: 0px;
+  }
+
+  .close {
+    position: absolute;
+    width: 5%;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+  }
+
+  #leo {
+    width: 30%;
+    margin-top: 5%;
+  }
+
+  .shape {
+    margin-top: 10%;
+  }
+
+  .info_filmes {
+    width: 90%;
+    display: block;
+  }
+
+  .info_filmes img {
+    width: 100%;
+  }
+
+  .info_filmes h1 {
+    position: absolute;
+    top: 5%;
+    font-size: 1.2rem;
+    left: 55%;
+  }
+
+  .info_filmes .ano {
+    position: absolute;
+    top: 22%;
+    left: 55%;
+  }
+
+  .info_filmes .idade {
+    position: absolute;
+    top: 22%;
+    left: 70%;
+  }
+
+  .info_filmes button {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    width: 180px;
+  }
+
+  .info_filmes button a {
+    color: white;
+  }
+
+  .info_filmes .descricao {
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    font-size: 0.9rem;
+  }
+
+  .info_filmes .fechar {
+    position: absolute;
+    top: 1%;
+    right: 4%;
+    width: 5%;
+  }
+
+  .continuar {
+    margin-left: 15%;
+  }
+
+  .continuar h1 {
+    position: absolute;
+    left: 0;
+  }
+}

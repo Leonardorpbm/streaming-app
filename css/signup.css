@@ -1,0 +1,191 @@
+body {
+  background-image: url(../img/background.png);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-position: center -130px;
+}
+
+.top {
+  width: 5%;
+  cursor: pointer;
+  margin: 2%;
+}
+
+.logo {
+  position: absolute;
+  width: 2.8%;
+  cursor: pointer;
+  left: 7%;
+  top: 6.5%;
+}
+
+.iniciar {
+  margin-top: 10%;
+  width: 80%;
+  margin-left: 9%;
+}
+
+.conta {
+  color: white;
+  float: left;
+  font-size: 1.5em;
+  width: 35%;
+}
+
+.nome {
+  font-size: 0.3em;
+  background-color: rgba(66, 64, 64, 0.781);
+  width: 100%;
+  display: inline-flex;
+  padding-left: 5%;
+  border-radius: 20px;
+}
+.proprio{
+  position: absolute;
+  top: 40%;
+}
+
+#form {
+  background-color: rgba(66, 64, 64, 0);
+  border-radius: 7px;
+  padding: 1%;
+  color: rgb(219, 144, 53);
+  border-color: rgba(0, 0, 0, 0);
+  width: 100%;
+}
+
+.apelido {
+  margin-left: 130%;
+}
+
+.mail {
+  font-size: 0.3em;
+  background-color: rgba(66, 64, 64, 0.781);
+  width: 100%;
+  padding-left: 5%;
+  border-radius: 20px;
+}
+
+#form_mail {
+  background-color: rgba(66, 64, 64, 0);
+  border-radius: 7px;
+  padding: 1%;
+  color: rgb(219, 144, 53);
+  border-color: rgba(0, 0, 0, 0);
+  margin-right: -2%;
+  width: 80%;
+}
+
+#botao {
+  background-color: rgba(66, 64, 64, 0.781);
+  border-radius: 20px;
+  padding: 2.5%;
+  color: rgb(211, 209, 209);
+  border-color: rgba(0, 0, 0, 0.26);
+  width: 35%;
+  cursor: pointer;
+}
+
+#botao:hover {
+  background-color: rgba(22, 22, 22, 0.856);
+  color: rgb(219, 144, 53);
+}
+
+/*linha*/
+
+.linha {
+  margin-top: 13%;
+  width: 3px;
+  height: 50%;
+  margin-left: 40.5%;
+  position: absolute;
+  background-color: rgb(219, 144, 53);
+  animation: linha 5s ease infinite;
+}
+
+@keyframes linha {
+  0% {
+    height: 0%;
+  }
+
+  50% {
+    height: 32%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+
+/*ENTRAR*/
+
+.entrar {
+  color: white;
+  float: right;
+  font-size: 1.5em;
+  width: 35%;
+}
+
+#bem {
+  margin-top: 42px;
+}
+
+.error{
+  color: rgb(241, 48, 48);
+  font-size: small;
+  margin-top: 4px;
+  margin-bottom: 25px;
+  margin-left: 5px;
+}
+
+
+@media (max-width:600px) {
+ 
+
+  .entrar {
+    color: white;
+    float: none;
+    font-size: 1em;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .proprio{
+    position: absolute;
+    top: 28%;
+  }
+  .conta {
+    color: white;
+    float: left;
+    font-size: 1em;
+    width: 100%;
+    margin-bottom: 25%;
+    margin-top: 50px;
+  }
+
+  .linha {
+    margin-top: 82%;
+    width: 250px;
+    height: 0.3%;
+    margin-left: 23%;
+    position: absolute;
+    background-color: rgb(219, 144, 53);
+    animation: linha 5s ease infinite;
+  }
+  
+  @keyframes linha {
+    0% {
+      width: 0%;
+    }
+  
+    50% {
+      width: 32%;
+    }
+  
+    100% {
+      width: 0%;
+    }
+  }
+  
+
+}

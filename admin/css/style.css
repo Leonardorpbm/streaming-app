@@ -1,0 +1,145 @@
+﻿/*** Reset ***/
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Montserrat";
+  font-size: 16px;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+figure {
+  margin: 0;
+}
+
+.main-header {
+  padding: 1em;
+  background: coral;
+  color: #fff;
+}
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.main-header h1 {
+  font-size: 1.5em;
+}
+
+/*** Lista ***/
+.list {
+  box-shadow: 0 0 5px #ccc;
+  border-radius: 20px;
+}
+.list-item {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.list-item:nth-last-child(even) {
+  background: coral;
+}
+
+.list-item:nth-last-child(even) a {
+  color: white;
+}
+
+.list-title {
+  width: 60%;
+  text-align: left;
+}
+
+.list-title a {
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.list-date {
+  width: 20%;
+}
+
+.list-edit {
+  width: 10%;
+}
+.list-delete {
+  width: 10%;
+}
+.edit-button {
+  text-decoration: underline;
+}
+.clear {
+  clear: both;
+}
+
+/*** Inserir ***/
+
+#insert-button {
+  background: coral;
+  color: white;
+  border-radius: 20px;
+  margin-left: 40%;
+}
+
+.submit-button {
+  border-radius: 20px;
+}
+.item-insert {
+  margin-top: 2em;
+}
+.item-insert h2 {
+  display: inline-block;
+  font-size: 1em;
+  color: #fff;
+  padding: 0.5em 2em;
+  cursor: pointer;
+}
+.item-insert form {
+  display: none;
+}
+
+/*** Forms ***/
+label {
+  display: block;
+  margin: 0.5em 0 0.2em 0;
+  font-weight: bold;
+  opacity: 0.5;
+}
+input,
+textarea {
+  display: block;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 0.7em 1em;
+  margin: 0 0 2em 0;
+  font-size: 1em;
+  font-family: inherit;
+  color: #333;
+  background: #eee;
+  border-radius: 20px;
+}
+textarea {
+  height: 12em;
+  font-family: inherit;
+}
+input.submit-button {
+  display: inline-block;
+  background: coral;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5em 2em;
+}
